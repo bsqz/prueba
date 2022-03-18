@@ -12,14 +12,6 @@ app = Flask(__name__)
 def home():
     return 'Hello World'
 
-@app.route('/getFromMongo', methods=["GET"])
-def getFromMongo():
-    client=pymongo.MongoClient("mongodb+srv://siberian:siberian@cluster0.jrgmw.mongodb.net/parcial?retryWrites=true&w=majority")
-    db=client.test
-    mydb=client["parcial"]
-    mycol=mydb["parcial"]
-    
-    return mycol.find_one()
     
 
     ####################################
